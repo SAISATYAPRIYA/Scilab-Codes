@@ -1,0 +1,13 @@
+//SOLVING  A  SYSTEM  OF  LINEAR  EQUATION
+Let the system of equations be        3x+2y-z=1
+                                      2x-2y+4z=-2
+                                     -x+0.5y-z=0
+
+a=[3 2 -1;2 -2 4;-1 0.5 -1];
+inv_a=inv(a);
+b=[1 ;-2; 0];
+X = inv_a*b;
+disp(X)
+
+//O/P -     1.0000000         -2.0000000           -2.0000000
+
