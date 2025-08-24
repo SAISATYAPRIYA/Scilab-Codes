@@ -1,0 +1,12 @@
+//SORTING OF ARRAY IN ASCENDING
+a=[1 0 8 3 6 7];
+b=gsort(a ,'g','i');
+disp(b)
+//O/P =  0.   1.   3.   6.   7.   8.
+
+
+//SORTING OF ARRAY IN DESCENDING
+a=[1 0 8 3 6 7];
+b=gsort(a ,'g','d');
+disp(b);
+//O/P = 8.   7.   6.   3.   1.   0.
