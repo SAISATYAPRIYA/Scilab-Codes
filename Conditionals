@@ -1,0 +1,12 @@
+// USING IF CONDITIONALS
+a=input("Enter your age - ");
+if a>=18 then
+    disp("You are eligible to vote !!");
+else
+    disp("You are not eligible to vote !!");
+end
+
+//O/P -        Enter your age - 10             "You are not eligible to vote !!"
+
+             
+               
