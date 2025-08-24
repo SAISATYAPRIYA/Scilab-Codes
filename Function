@@ -2,3 +2,16 @@ function y=f(x);
     y=x^5
 endfunction
 //O/P in the console -  //f(5)     ans =   3125.
+
+
+function y=f(x);
+    y=.x^5      ( . ) for arrays , vectors 
+endfunction
+//O/P in the console
+//a=[1 2 ;3 4]
+ a = [2x2 double]
+   1.   2.
+   3.   4.
+
+ f(a)     ans = [2x2 double]          1069.   1558.
+                                      2337.   3406.
