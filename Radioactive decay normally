@@ -1,0 +1,11 @@
+// RADIOACTIVE   DECAY   NORMALLY
+clf,
+No = 100;         // initial number of nuclei
+lambda = 0.05;      // decay constant
+t = 0:5:100;      // time vector (0 to 100 with step 0.5)
+N = No*exp(-lambda * t);     // Decay law
+plot(t, N, "r-");           // red line plot
+xlabel("Time (s)");         
+ylabel("Number of nuclei N(t)");
+title("Radioactive Decay: N(t) = N0 * exp(-lambda t)");
+xgrid(1,1,1);
