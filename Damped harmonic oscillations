@@ -1,9 +1,11 @@
-//DAMPED HARMONIC OSCILLATION     {x(t)=Ae^−tx*cos(ωt+ϕ)}
-x=[0:0.1:30]                                       
+//DAMPED HARMONIC OSCILLATION   x(t)=Ae^−tx*cos(ωt+ϕ)
+x=[0:0.1:30];                                       
 function x=f(t);
     x=exp(-.1*t).*cos(3*t);
 endfunction;
 x=f(t);
-plot(t,x,'r')
+plot(t,x,'r');
 xlabel("TIME");
-ylabel("DISPLACEMENT")
+ylabel("DISPLACEMENT");
+xgrid(1,1,3);
+legend(["Damped harmonic oscillation"]);
