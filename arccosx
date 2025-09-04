@@ -1,0 +1,9 @@
+// Program: Plot of arccos(x)
+
+x = -1:0.01:1;
+y = acos(x);
+
+plot(x, y, 'b')
+xlabel("x")
+ylabel("acos(x)")
+title("Graph of arccos(x)")
