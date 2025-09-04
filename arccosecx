@@ -1,0 +1,4 @@
+(domain: |x| >= 1)
+x5 = [-10:0.1:-1, 1:0.1:10];
+y5 = acsc(x5);
+plot(x5, y5, 'c', "LineWidth",2);
