@@ -1,0 +1,11 @@
+// Define range of x (avoid multiples of pi because sin(x)=0 there)
+x = 0.1 : 0.1 : 2*%pi - 0.1;
+
+// Compute cosec(x) directly
+y = 1 ./ sin(x);
+
+// Plot
+plot(x, y)
+xlabel("x")
+ylabel("cosec(x)")
+title("Plot of cosec(x) without using function")
