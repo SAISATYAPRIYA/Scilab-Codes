@@ -1,0 +1,11 @@
+// Define range of x (avoid multiples of pi/2 because cos(x)=0 there)
+x = -%pi/2 + 0.1 : 0.1 : %pi/2 - 0.1;
+
+// Compute sec(x) directly
+y = 1 ./ cos(x);
+
+// Plot
+plot(x, y)
+xlabel("x")
+ylabel("sec(x)")
+title("Plot of sec(x) without using function")
