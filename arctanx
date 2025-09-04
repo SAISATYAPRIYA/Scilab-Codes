@@ -1,0 +1,9 @@
+// Program: Plot of arctan(x)
+
+x = -10:0.1:10;
+y = atan(x);
+
+plot(x, y, 'g')
+xlabel("x")
+ylabel("atan(x)")
+title("Graph of arctan(x)")
