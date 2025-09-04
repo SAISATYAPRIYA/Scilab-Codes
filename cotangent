@@ -1,0 +1,11 @@
+// Define range of x (avoid multiples of pi to prevent division by zero)
+x = 0.1:0.1:%pi-0.1;
+
+// Compute cot(x) directly
+y = cos(x)./sin(x);      // or y = 1 ./ tan(x);
+
+// Plot
+plot(x, y)
+xlabel("x")
+ylabel("cot(x)")
+title("Plot of cot(x) without using function")
