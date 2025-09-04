@@ -1,0 +1,13 @@
+// Program: Plot of arcsin(x)
+
+// Define domain
+x = -1:0.01:1;
+
+// Compute arcsin
+y = asin(x);
+
+// Plot
+plot(x, y, 'r')
+xlabel("x")
+ylabel("asin(x)")
+title("Graph of arcsin(x)")
