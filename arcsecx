@@ -1,0 +1,4 @@
+(domain: |x| >= 1)
+x4 = [-10:0.1:-1, 1:0.1:10];
+y4 = asec(x4);
+plot(x4, y4, 'm', "LineWidth",2);
