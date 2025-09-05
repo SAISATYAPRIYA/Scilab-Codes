@@ -1,7 +1,8 @@
 clf;
-x=[-100:0.1:-1,1:0.1:100];
-y=asec(x);
-plot(x,y);
-xlabel("x")
-ylabel("asec(x)")
-title("Inverse secant graph")
+x = -100:0.1:100;
+y = asec(x);
+xgrid(1,1,3)
+plot(x, y, 'k', "LineWidth",2);
+xlabel("X");
+ylabel("arc sec(x)")
+title("Graph of arc secant x")
