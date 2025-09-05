@@ -1,0 +1,9 @@
+clf;
+x = -10:0.1:10;
+y = %pi/2 - atan(x);
+xgrid(1,1,1)
+plot(x, y, 'k', "LineWidth",3);
+xlabel("X");
+ylabel("arc cotangent(x)")
+title("Graph of arc cot x")
+
