@@ -1,14 +1,16 @@
-//RADIOACTIVE DECAY USING ODE
-t=[0:0.5:100];        
-to=0;
-No=100;        //Initial Nucleus
-lambda=0.05;    //Decay constant
-function dN=f(t,N)        //dn/dt = -lambda*n
-    dN=-lambda*N
-endfunction;
-N=ode(No,to,t,f);        
-plot(t,N,'--r');
+clf;clc;clear;
+lambda=0.1;
+function dN=f(t,N);
+    dN=-lambda*N;
+endfunction
+t=[0:0.1:100];
+N0=100;
+t0=0;
+N=ode(N0,t0,t,f);
+plot(t,N,"--r","Linewidth",3)
+title("Radioactive Decay")
 xgrid(1,1,1);
 legend(["Radioactive Decay"]);
 xlabel("Time");
 ylabel("Number of Nuclei");
+
