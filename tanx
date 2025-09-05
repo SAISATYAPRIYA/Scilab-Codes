@@ -1,0 +1,8 @@
+clf;
+x=-180:5:180;
+y=tand(x);
+plot(x,y,"r","LineWidth",3);
+xgrid(1,1,2)
+xlabel("x")
+ylabel("tan(x)")
+title("Tangent graph")
