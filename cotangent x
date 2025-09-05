@@ -1,0 +1,8 @@
+clf;
+x=0.1:0.1:%pi-0.1;
+y=cotg(x);
+plot(x,y,"r","LineWidth",3);
+xgrid(1,1,2)
+xlabel("x")
+ylabel("cot(x)")
+title("Cotangent graph")
