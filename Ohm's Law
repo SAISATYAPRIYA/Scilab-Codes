@@ -1,0 +1,14 @@
+clc; clear; clf;
+
+R1 = 5; 
+R2 = 7 ;                      // Resistance in ohms
+I = 0:0.5:10;                 // Current values
+V1 = I * R1;
+V2=I*R2;
+xgrid(1,1,2)
+plot(I, V1,'r', 'LineWidth', 3);
+plot(I, V2,'--', 'LineWidth', 3);
+xlabel("Current (I) in Amperes");
+ylabel("Voltage (V) in Volts");
+title("Ohms law");
+xgrid(color("grey"));
