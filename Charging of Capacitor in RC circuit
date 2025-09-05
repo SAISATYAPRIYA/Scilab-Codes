@@ -1,0 +1,14 @@
+clf;clc;clear;
+E=1;R=1;C=1;
+function dQ=f(t,Q);
+    dQ=1/R*(E-Q/C);
+endfunction
+t=[0:0.1:100];
+t0=0;
+Q0=0;
+Q=ode(Q0,t0,t,f);
+plot(t,Q,"Linewidth",3);
+xlabel("TIME")
+ylabel("Charge on Capacitor");
+xgrid(1,1,1);
+title("Charging of Capacitor")
