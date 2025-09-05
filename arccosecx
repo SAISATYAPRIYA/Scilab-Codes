@@ -1,4 +1,9 @@
-(domain: |x| >= 1)
-x5 = [-10:0.1:-1, 1:0.1:10];
-y5 = acsc(x5);
-plot(x5, y5, 'c', "LineWidth",2);
+clf;
+x = -100:0.1:100;
+y = acsc(x);
+xgrid(1,1,1)
+plot(x, y, 'k', "LineWidth",2);
+xlabel("X");
+ylabel("arc cos(x)")
+title("Graph of arc cosecant x")
+
