@@ -1,9 +1,9 @@
-// Program: Plot of arccos(x)
-
+clf;
 x = -1:0.01:1;
 y = acos(x);
+xgrid(1,1,3)
+plot(x, y, 'k', "LineWidth",2);
+xlabel("X");
+ylabel("arc cos(x)")
+title("Graph of arc cos x")
 
-plot(x, y, 'b')
-xlabel("x")
-ylabel("acos(x)")
-title("Graph of arccos(x)")
