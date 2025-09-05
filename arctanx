@@ -1,9 +1,9 @@
-// Program: Plot of arctan(x)
-
+clf;
 x = -10:0.1:10;
 y = atan(x);
+xgrid(1,1,3)
+plot(x, y, 'k', "LineWidth",2);
+xlabel("X");
+ylabel("arc tan(x)")
+title("Graph of arc tangent x")
 
-plot(x, y, 'g')
-xlabel("x")
-ylabel("atan(x)")
-title("Graph of arctan(x)")
