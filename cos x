@@ -1,0 +1,8 @@
+clf;
+x=0:0.1:2*%pi;
+y=cos(x);
+plot(x,y,"r","LineWidth",3);
+xgrid(1,1,2)
+xlabel("x")
+ylabel("cos(x)")
+title("Cosine graph")
