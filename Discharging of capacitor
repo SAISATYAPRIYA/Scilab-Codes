@@ -1,0 +1,22 @@
+clf; clc; clear;
+// Differential equation: dQ/dt = -(1/RC)*Q
+R = 20;        
+C = 0.001;         
+Q0 = 1e-3;         
+t0 = 0;            
+t = 0:0.001:0.1;   
+
+function dQ = f(t, Q)
+    dQ = -(1/(R*C)) * Q;
+endfunction
+
+Q = ode(Q0, t0, t,f);
+
+// Voltage across capacitor
+V = Q ./ C;
+plot(t, V, 'LineWidth', 2);
+xlabel("Time (s)");
+ylabel("Voltage V(t) (V)");
+title("Discharging of Capacitor - Voltage");
+xgrid(1,1,2)
+
