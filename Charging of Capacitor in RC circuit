@@ -8,7 +8,7 @@ t0=0;
 Q0=0;
 Q=ode(Q0,t0,t,f);
 plot(t,Q,"Linewidth",3);
-xlabel("TIME")
+xlabel("Time")
 ylabel("Charge on Capacitor");
 xgrid(1,1,1);
 title("Charging of Capacitor")
