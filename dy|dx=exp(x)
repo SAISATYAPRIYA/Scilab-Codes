@@ -1,0 +1,13 @@
+clf;clear;clc;
+function dy=f(x,y)
+    dy=exp(x)
+endfunction;
+x0=0;
+y0=1;
+xf=8;
+x=0:0.01:8
+y=ode(y0,x0,x,f);
+plot(x,y,"Linewidth",2);
+xlabel("X");
+ylabel("Y");
+title("Solution of the DE - dy/dx=exp(x) ")
