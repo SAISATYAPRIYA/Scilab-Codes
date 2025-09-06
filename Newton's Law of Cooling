@@ -1,0 +1,15 @@
+clf,clc;clear;
+k=0.1;
+Tenv=25;
+T0=90;
+t0=0;
+function dT=f(t,T)
+    dT=-k*(T-Tenv)
+endfunction
+t=0:0.5:100;
+T=ode(T0,t0,t,f);
+plot(t,T);
+xgrid(1,1,1);
+xlabel("Time");
+ylabel("Temperature");
+title("Newtons Law of cooling ");
