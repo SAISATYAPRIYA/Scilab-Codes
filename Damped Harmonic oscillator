@@ -1,0 +1,26 @@
+clf; clc; clear;
+
+// Define damped harmonic oscillator system
+function dy=f(t,y)
+    beta = 0.5;    // damping coefficient
+    omega = 2;     // natural frequency
+    dy(1) = y(2);
+    dy(2) = -omega^2*y(1) - 2*beta*y(2);
+endfunction
+
+// Initial conditions
+t0 = 0;
+tf = 10;
+t = t0:0.01:tf;
+y0 = 1;   // initial displacement
+v0 = 0;   // initial velocity
+
+// Solve system
+y = ode([y0; v0], t0, t, f);
+xgrid(1,1,3)
+// Plot displacement vs time
+plot(t, y(1,:));
+xlabel("Time (t)");
+ylabel("Displacement y(t)");
+title("Damped Harmonic Oscillator");
+
