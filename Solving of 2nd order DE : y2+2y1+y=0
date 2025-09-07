@@ -1,0 +1,23 @@
+clf; clc; clear;
+
+// Define differential equation system
+function dy=f(x,y)
+    dy(1)=y(2);
+    dy(2)=-y(1)-2*y(2);
+endfunction
+
+// Initial conditions
+xi=0;
+x=0:0.01:5;
+yi=0;
+y2i=1;
+
+// Solve ODE
+y=ode([yi; y2i], xi, x, f);
+xgrid(1,1,3);
+
+// Plot displacement (y(1,:)) vs time (x)
+plot(x, y(1,:));
+xlabel("X");
+ylabel("Y");
+title("Solving of 2nd order DE : y2+2y1+y=0");
