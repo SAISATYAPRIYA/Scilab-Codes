@@ -1,0 +1,21 @@
+clf; clc; clear;
+
+// Define differential equation
+function dy=f(x,y)
+    dy = x + y;
+endfunction
+
+// Initial condition
+xi = 0;
+xf = 0.3;
+x = xi:0.01:xf;
+yi = 1;   // example: y(0) = 1
+
+// Solve ODE
+y = ode(yi, xi, x, f);
+
+// Plot solution
+plot(x, y);
+xlabel("x");
+ylabel("y(x)");
+title("Solution of y1 = x + y");
