@@ -1,0 +1,22 @@
+clf; clc; clear;
+
+function dx=f(t,x)
+    omega = 1;         // natural frequency
+    dx(1) = x(2);      // dx1/dt = velocity
+    dx(2) = -omega^2 * x(1);   // dx2/dt = acceleration
+endfunction
+
+t0 = 0;               // start time
+tf = 10;              // end time
+t = t0:0.01:tf;       // time vector
+x0 = 1;               // initial displacement
+v0 = 0;               // initial velocity
+
+// Solve ODE
+x = ode([x0; v0], t0, t, f);
+
+// Plot displacement vs time
+plot(t, x(1,:));
+xlabel("Time (t)");
+ylabel("Displacement x(t)");
+title("Simple Harmonic Oscillator");
