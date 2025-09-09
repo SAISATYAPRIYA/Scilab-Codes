@@ -1,0 +1,42 @@
+clc; clear;
+
+// Coefficient matrix A and RHS vector b
+A = [2 3 4; 3 4 1; 1 5 4];
+b = [13; 9; 14];
+
+// Form augmented matrix
+Ab = [A b];
+disp("Initial Augmented Matrix:");
+disp(Ab);
+
+// Number of equations
+n = size(A,1);
+
+// Forward Elimination (Convert to Upper Triangular)
+for k = 1:n-1
+    // Pivot element
+    pivot = Ab(k,k);
+    
+    // Make sure pivot is not zero
+    if pivot == 0 then
+        error("Zero pivot encountered!");
+    end
+    
+    // Eliminate entries below pivot
+    for i = k+1:n
+        factor = Ab(i,k)/pivot;
+        Ab(i,:) = Ab(i,:) - factor*Ab(k,:);
+    end
+end
+
+disp("Upper Triangular Form:");
+disp(Ab);
+
+// Back Substitution
+x = zeros(n,1);
+for i = n:-1:1
+    x(i) = (Ab(i,$) - Ab(i,i+1:n)*x(i+1:n)) / Ab(i,i);
+end
+
+disp("Solution of the system:");
+disp(x);
